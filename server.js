@@ -1,12 +1,12 @@
 require("dotenv").config();
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const connectDB = require('./config/db');
+const express = require("express");
+const cors = require("cors");
+const bodyParser = require("body-parser");
+const connectDB = require("./config/db");
 
 // Routes
-const roomsRoutes = require('./routes/rooms');
-const reservationsRoutes = require('./routes/reservations');
+const roomsRoutes = require("./routes/rooms");
+const reservationsRoutes = require("./routes/reservations");
 const authRoutes = require("./routes/auth");
 
 const app = express();
@@ -17,21 +17,22 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // API Routes
-app.use('/api/rooms', roomsRoutes);
-app.use('/api/reservations', reservationsRoutes);
+app.use("/api/rooms", roomsRoutes);
+app.use("/api/reservations", reservationsRoutes);
 app.use("/api/auth", authRoutes);
 
-
 // Default route
-app.get('/', (req, res) => {
-  res.send('API is running...');
+app.get("/", (req, res) => {
+  res.send("API is running...");
 });
 
-// Health check route for Render
-app.get('/health', (req, res) => {
-  res.status(200).send('OK');
+// Health check route (Render)
+app.get("/health", (req, res) => {
+  res.status(200).send("OK");
 });
 
-// Start server
-const PORT = 5000;
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+// Start server (IMPORTANT FOR RENDER)
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
