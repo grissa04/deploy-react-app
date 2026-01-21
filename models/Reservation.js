@@ -6,7 +6,7 @@ const ReservationSchema = new mongoose.Schema({
   date: { type: String, required: true }, // YYYY-MM-DD
   startTime: { type: String, required: true }, // HH:mm
   endTime: { type: String, required: true },
-  expiresAt: { type: Date, index: true }
+  expiresAt: { type: Date }
 });
 
 ReservationSchema.pre('save', function setExpiry(next) {
