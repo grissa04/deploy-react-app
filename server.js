@@ -27,6 +27,11 @@ app.get('/', (req, res) => {
   res.send('API is running...');
 });
 
+// Health check route for Render
+app.get('/health', (req, res) => {
+  res.status(200).send('OK');
+});
+
 // Start server
 const PORT = 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
