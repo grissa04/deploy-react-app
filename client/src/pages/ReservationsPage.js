@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { getApiUrl } from "../lib/api";
 
 export default function ReservationsPage() {
   const [reservations, setReservations] = useState([]);
@@ -7,7 +8,7 @@ export default function ReservationsPage() {
 
   const fetchReservations = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/reservations");
+      const res = await axios.get(getApiUrl("/api/reservations"));
       setReservations(res.data || []);
       setLoading(false);
     } catch (err) {
@@ -24,7 +25,7 @@ export default function ReservationsPage() {
     if (!window.confirm("Are you sure you want to cancel this reservation?")) return;
 
     try {
-      const res = await axios.delete(`http://localhost:5000/api/reservations/${id}`);
+      const res = await axios.delete(getApiUrl(`/api/reservations/${id}`));
       alert(res.data.message || "Reservation cancelled");
       fetchReservations(); // refresh list
     } catch (err) {

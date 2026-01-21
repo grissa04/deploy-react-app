@@ -1,6 +1,7 @@
 import React from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { GoogleLogin } from "@react-oauth/google";
+import { getApiUrl } from "../lib/api";
 
 export default function Login({ onLoginSuccess }) {
   const navigate = useNavigate();
@@ -9,7 +10,7 @@ export default function Login({ onLoginSuccess }) {
 
   const handleGoogleSuccess = async (credentialResponse) => {
     try {
-      const res = await fetch("http://localhost:5000/api/auth/google", {
+      const res = await fetch(getApiUrl("/api/auth/google"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ tokenId: credentialResponse.credential }),

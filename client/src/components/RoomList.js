@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getApiUrl } from "../lib/api";
 
 export default function RoomList() {
   const [rooms, setRooms] = useState([]);
@@ -7,7 +8,7 @@ export default function RoomList() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/rooms")
+    fetch(getApiUrl("/api/rooms"))
       .then((res) => res.json())
       .then((data) => {
         setRooms(data.rooms || []);

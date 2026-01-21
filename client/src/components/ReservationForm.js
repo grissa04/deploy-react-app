@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { getApiUrl } from "../lib/api";
 
 export default function ReservationForm() {
   const { roomId } = useParams();
@@ -14,7 +15,7 @@ export default function ReservationForm() {
   });
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/rooms")
+    fetch(getApiUrl("/api/rooms"))
       .then((res) => res.json())
       .then((data) => {
         setRooms(data.rooms || []);
@@ -57,7 +58,7 @@ export default function ReservationForm() {
     return;
   }
 
-  const res = await fetch("http://localhost:5000/api/reservations", {
+  const res = await fetch(getApiUrl("/api/reservations"), {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
