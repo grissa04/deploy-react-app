@@ -1,0 +1,76 @@
+[
+  {
+    "roomId": "68b6d419ded2094eaf9ef397",
+    "date": "2025-09-04",
+    "startTime": "17:50",
+    "endTime": "18:50",
+    "_id": "68b871eaf6d04e9ddd5d569f",
+    "__v": 0
+  },
+  {
+    "roomId": "68b6d419ded2094eaf9ef397",
+    "date": "2025-09-05",
+    "startTime": "17:50",
+    "endTime": "18:50",
+    "_id": "68b8725df6d04e9ddd5d56a3",
+    "__v": 0
+  },
+  {
+    "roomId": "68b6d419ded2094eaf9ef397",
+    "date": "2025-09-06",
+    "startTime": "17:50",
+    "endTime": "18:50",
+    "_id": "68b8729cf6d04e9ddd5d56af",
+    "__v": 0
+  },
+  {
+    "roomId": "68b6d419ded2094eaf9ef392",
+    "date": "2025-09-12",
+    "startTime": "12:41",
+    "endTime": "18:41",
+    "_id": "68b97ae603e9ab382db098e1",
+    "__v": 0
+  },
+  {
+    "roomId": "68b6d419ded2094eaf9ef397",
+    "date": "2025-09-20",
+    "startTime": "16:30",
+    "endTime": "17:31",
+    "_id": "68cd77184f3241e2d862dcd7",
+    "__v": 0
+  },
+  {
+    "roomId": "68b6d419ded2094eaf9ef397",
+    "date": "2025-09-20",
+    "startTime": "18:30",
+    "endTime": "19:30",
+    "_id": "68cd7a7d4f3241e2d862ddb6",
+    "__v": 0
+  },
+  {
+    "roomId": "68b6d419ded2094eaf9ef395",
+    "date": "2025-09-10",
+    "startTime": "17:52",
+    "endTime": "18:52",
+    "_id": "68dc0ad094871309c2189669",
+    "__v": 0
+  },
+  {
+    "roomId": "68b6d419ded2094eaf9ef395",
+    "date": "2026-01-25",
+    "startTime": "17:00",
+    "endTime": "20:00",
+    "_id": "696fa6b28c1b3d2650ee28ed",
+    "__v": 0
+  },
+  {
+    "roomId": "68b6d419ded2094eaf9ef392",
+    "userId": "696fcaaa653a3a6629778993",
+    "date": "2026-01-22",
+    "startTime": "12:47",
+    "endTime": "13:47",
+    "_id": "6970aee18b40c183e0471afa",
+    "expiresAt": "2026-01-22T12:47:00.000Z",
+    "__v": 0
+  }
+]
